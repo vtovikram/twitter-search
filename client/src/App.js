@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import logo from './logo.svg';
 
-import './App.scss';
+import './App.css';
 import TwitterPanel from './twitter/views/TwitterPanel';
 
 class App extends Component {
