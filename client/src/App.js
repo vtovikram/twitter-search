@@ -2,27 +2,37 @@ import React, { Component } from 'react';
 
 import logo from './logo.svg';
 
-import './App.css';
+import './App.scss';
+import TwitterPanel from './twitter/views/TwitterPanel';
 
 class App extends Component {
-  state = {
-    response: ''
-  };
 
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
+  constructor(props) {
+      super(props);
+      this.state = {value: ''};
+      this.state = {response: ''};
+
+      this.handleChange = this.handleChange.bind(this);
+    }
 
   callApi = async () => {
-    const response = await fetch('/api/hello');
+    const response = await fetch(`/api/hello?test=${this.state.value}`);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
 
     return body;
   };
+
+  onClickButton = () =>{
+    this.callApi()
+      .then(res => this.setState({ response: res.express }))
+      .catch(err => console.log(err));
+  }
+  handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+
 
   render() {
     return (
@@ -31,7 +41,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">{this.state.response}</p>
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <button onClick={this.onClickButton}>Test</button>
+        <TwitterPanel searchData={this.state.response}></TwitterPanel>
       </div>
     );
   }

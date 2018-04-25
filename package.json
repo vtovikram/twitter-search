@@ -14,7 +14,8 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.1"
