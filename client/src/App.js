@@ -43,7 +43,7 @@ class App extends Component {
         </header>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
         <button onClick={this.onClickButton}>Test</button>
-        <TwitterPanel searchData={this.state.response}></TwitterPanel>
+        {this.state.response && <TwitterPanel searchData={this.state.response}></TwitterPanel>}
       </div>
     );
   }

@@ -16,7 +16,7 @@ var options = {
 };
 
 app.get('/api/hello', (req, res) => {
-  options.url = `${twitter_api}?q=${req.query.test}&result_type=popular`
+  options.url = `${twitter_api}?q=${req.query.test}&result_type=popular&tweet_mode=extended`
   request(options, function(error, response, body) {
     debugger;
     res.send({ express: body });

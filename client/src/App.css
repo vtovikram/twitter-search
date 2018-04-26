@@ -22,6 +22,27 @@
   font-size: large;
 }
 
+.App-tweet-panel {
+  width: 500px;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid grey;
+}
+
+.App-tweet-panel-tweet {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+  text-align: left;
+}
+img  {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.expandedTweet__model {
+  height: 500px;
+  width: 400px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
