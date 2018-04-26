@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import logo from './logo.svg';
-
 import './App.css';
+
 import TwitterPanel from './twitter/views/TwitterPanel';
 
 class App extends Component {
@@ -36,15 +36,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <article className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Lets search for tweets</h1>
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <button onClick={this.onClickButton}>Search</button>
         </header>
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <button onClick={this.onClickButton}>Test</button>
+
+
         {this.state.response && <TwitterPanel searchData={this.state.response}></TwitterPanel>}
-      </div>
+
+      </article>
     );
   }
 }

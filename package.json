@@ -1,11 +1,10 @@
 {
-  "name": "example-create-react-app-express",
+  "name": "twitter-search",
   "version": "1.0.0",
   "description": "Example on using create-react-app with a Node Express Backend",
   "author": {
-    "name": "Esau Silva",
-    "email": "esausilva85@gmail.com",
-    "url": "https://esausilva.com"
+    "name": "Vikram Venkataraman",
+    "email": "vikram.venkataraman01@gmail.com@gmail.com"
   },
   "license": "MIT",
   "scripts": {
@@ -21,11 +20,7 @@
     "concurrently": "^3.5.1"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/esausilva/example-create-react-app-express.git"
-  },
-  "bugs": {
-    "url": "https://github.com/esausilva/example-create-react-app-express/issues"
+    "type": "git"
   },
   "keywords": [
     "node",
