@@ -37,13 +37,15 @@ class App extends Component {
   render() {
     return (
       <article className="App">
+
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Lets search for tweets</h1>
+          <label>Input your search querry
             <input type="text" value={this.state.value} onChange={this.handleChange} />
-            <button onClick={this.onClickButton}>Search</button>
+          </label>
+          <button onClick={this.onClickButton}>Search</button>
         </header>
-
 
         {this.state.response && <TwitterPanel searchData={this.state.response}></TwitterPanel>}
 

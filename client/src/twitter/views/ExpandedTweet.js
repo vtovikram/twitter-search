@@ -8,9 +8,9 @@ class ExpandedTweet extends Component {
     const profileImage = this.props.profileImage;
     return (
       <section className='expandedTweet__model'>
-      <img src = {profileImage}/>
-      {userName}
-      <div>Work in Progress</div>
+        <img src = {profileImage}/>
+        {userName}
+        <div>Work in Progress</div>
       </section>
     );
   }

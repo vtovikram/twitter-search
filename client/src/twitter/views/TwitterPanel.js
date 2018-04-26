@@ -27,7 +27,7 @@ class TwitterPanel extends Component {
 
     return (
       <div className="App-tweet-panel">
-      {this.state.searchData && tweet}
+        {this.state.searchData && tweet}
       </div>
     );
   }

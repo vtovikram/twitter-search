@@ -23,15 +23,11 @@ class Tweet extends Component {
 
     return (
       <section className="App-tweet-panel-tweet" onClick={this.onOpenModal}>
-      <a target="_blank" href={`https://twitter.com/${userName}`}>
-      <img src = {profileImage}/>
-      {userName}</a>
-      <div>{displayText}</div>
-      <div>
-        <Modal open={open} onClose={this.onCloseModal} little>
-          <ExpandedTweet userName={userName} profileImage={profileImage}/>
-        </Modal>
-      </div>
+        <a target="_blank" href={`https://twitter.com/${userName}`}>
+          <img src = {profileImage}/>
+          {userName}
+        </a>
+        <div>{displayText}</div>
       </section>
     );
   }
